@@ -5,7 +5,4 @@ def add(a, b):
 def subtract(a, b):
     return a-b
 
-
  
- a = [1, 2, 3]
- b = {1, 2, 3}
