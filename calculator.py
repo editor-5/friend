@@ -5,4 +5,5 @@ def add(a, b):
 def subtract(a, b):
     return a-b
 
-c = [1, 2, 3]
+def multiply(a, b):
+    return a*b
