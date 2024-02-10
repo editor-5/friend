@@ -229,10 +229,40 @@ for i in range(0, len(A), 3):
     카운터[a] += 1
 
 print(카운터)
-print(f"사용된 숫자의 종류는 {len(카운터)}개입니다.")  '''
+print(f"사용된 숫자의 종류는 {len(카운터)}개입니다.")  
+
+# 47강
+
+A = [1, 2 ,[3, 4], 5, [6, 7], [8, 9]]
+B = []
+
+for a in A:
+    if type(a) == list:
+        print(a)
+        for i in a:
+            B.append(i)                
+    else:
+        B.append(a)
+
+print(f"{A}를 평탄화하면")
+print(f"{B}입니다") 
 
 
 
+A = [1, 2 ,[3, 4], 5, [6, 7], [8, 9]]
+B = []
+
+for a in A:
+    if type(a) == list:
+        for i in a:
+            B += [i]                
+    else:
+        B += [a]
+
+print(f"{A}를 평탄화하면")
+print(f"{B}입니다") 
+
+'''
 
 
 
