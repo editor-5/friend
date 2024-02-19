@@ -262,16 +262,50 @@ for a in A:
 print(f"{A}를 평탄화하면")
 print(f"{B}입니다") 
 
+
+
+# 50강
+
+# 매개변수: 함수의 괄호 안에 넣는 변수
+# parameter: 함수 정의 때 넣은 변수
+def print_3_times(문자열,횟수):
+    for i in range(횟수):
+        print(문자열)
+    
+# argument: 함수 호출 때 넣은 값
+print_3_times("안녕", 10)
+
+
+
+# 51강
+
+def print_n_times(횟수, *리스트):
+    print(리스트)
+    for i in range(횟수):
+        for 요소 in 리스트:
+            print(요소)
+문자열목록 = ["안녕", "하세요"]
+#print_n_times(2, "안녕", "하세요")
+print_n_times(2, *문자열목록)
+
+
+
+# 52강
+print("안", "녕", "하", "세", "요",
+      sep="::", end="")
+print("안", "녕", "하", "세", "요",
+      sep="::", end="")
+print("안", "녕", "하", "세", "요",
+      sep="::", end="")
+
+
+def 함수(*가변, **딕셔너리):
+    print(가변, 딕셔너리)
+
+함수("안", "녕", "하",
+   a=10, b=20, c=30)
+
 '''
-
-
-
-
-
-
-
-
-
 
 
 
