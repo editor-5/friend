@@ -1,11 +1,12 @@
-import pandas as pd
+# 산소의 분압= (산소의 양 / 전체 공기의 양 × 총 압력)
+# 산소의 분압= 4L / 4L × 1 기압 
+# 산소의 분압=1 기압 
 
-# 사전에서 DataFrame 생성
-data = {'이름': ['영희', '철수', '미영', '동민'],
-        '나이': [25, 30, 35, 40],
-        '도시': ['서울', '부산', '대전', '광주']}
+O = 0.2  # 산소비율 백분율
+air = 20  
+psi = 1   
+yonggi = 4  
 
-df = pd.DataFrame(data)
+dab = (air * O ) / yonggi * psi
 
-# DataFrame 표시
-print(df)
+print(dab)
