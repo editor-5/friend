@@ -168,5 +168,41 @@ TS = 85 - 20
 Q = W * C * TS
 print(Q)
 
+# 77
+LPG = 16
+DO = -42.6
+DOSIBAL = 700
+LPGGI1 = 95
+LPGGI2 = 80
+KG = (LPG * LPGGI1) / (DOSIBAL * LPGGI2 * 0.01)
+print(KG)
+
+# 79 PV = GRT  , V = GRT / P
+G = 100  # KG
+R = 26.5 # 산소의 가스정수
+T = 20 + 273 
+P = (120 + 1.033 )* (10**4)
+V = (G * R * T) / P
+print(V)
+
+# 88 (보일의법칙) P1*V1 = P2*V2 , P2= P1*V1 / V2
+PA = 1 
+P1 = 5
+V1 = 20  # L
+V2 = 60  # L
+P2 = P1 * V1 / V2
+print(P2)
+
+# 89 (보일의법칙) P1 * V1 = P2 * V2 , V2 = P1 * V1 / P2
+TA = 25 
+P1 = 4
+P2 = 2
+V1 = 100 # L
+V2 = P1 * V1 / P2 
+print(V2)
+
+
+
+
 
 
