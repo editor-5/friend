@@ -121,7 +121,7 @@ L = LPG / C
 G = GA * L / 1000  # M3
 print(G)
 
-'''
+
 # 62 (샤르의법칙)
 K = 273
 T1 = 15 
@@ -201,8 +201,166 @@ V1 = 100 # L
 V2 = P1 * V1 / P2 
 print(V2)
 
+#90 (보일샬의법칙)  P1V1/T1 = P2V2/T2  
+P1 = 0
+V1 = 600
+T1 = 27 + 273
+P2 = 0
+T2 = 127 + 273
+V2 = (V1 * T2) / T1
+print(V2)
 
+# 91 (보일샬의법칙)  P1V1/T1 = P2V2/T2  
+P1 = 2
+V1 = 4
+T1 = 27 + 273
+P2 = 1
+T2 = 0 + 273
+V2 = (P1 * V1 * T2) / (P2 * T1)
+print(V2)
 
+#92 PV = NRT , PV = W/M R T , P = M R T / V W
+W = 26 
+R = 0.082
+T = 10 + 273
+M = 2 
+V = 28.3
+P = (W * R * T) / (M * V)
+print(P)
 
+#93 PV = NRT , PV = W/M R T , P = M R T / V W , P = NRT / V
+W = 0 
+R = 0.082
+T = 200 + 273
+M = 0
+NH = 8.4
+NN = 2
+H2 = 1
+N2 = 14
+N = (8.4 / 28) + (2 / 2) 
+V = 1
+P = (N * R * T) /  V
+print(P)
 
+#94 PV = NRT , PV = W/M R T , P = M R T / V W , P = NRT / V ,  M = P V W / R T
+W = 30
+R = 0.082
+T = 20 + 273
+P = 1
+V = 10
+M = (R * T * W) / (P * V)
+print(M)
 
+#96 PV = NRT , PV = W/M R T , P = M R T / V W , P = NRT / V ,  M = P V W / R T , P = MM R T / M
+W = 0
+R = 0.082
+T = 27 + 273
+P = 1
+V = 0
+MM = 1.3
+M = (MM * R * T) / P
+print(M)   # 산소 16 * 2 = O2
+
+# 115 진공도 = 진공압 * 100 / 대기압 
+진공압 = 0.8
+대기압 = 700
+KGCM = 0.00131578947 
+진공도 = (진공압 * 100) / (대기압 * KGCM)
+print(진공도)
+print(대기압 * KGCM)
+
+# 127  (보일의법칙) P1 V1 = P2 V2
+P1 = 1
+V1 = 10
+V2 = 300
+P2 = (P1 * V1) / V2
+print(P2)
+
+# 128  (보일의법칙) P1 V1 = P2 V2
+P1 = 1
+V1 = 100
+V2 = 5
+P2 = (P1 * V1) / V2
+print(P2)
+
+# 130  (보일샬의법칙) P1 V1 / T1 = P2 V2 / T2 , V2 = V1 P1 T2 / P2 T1
+P1 = 1
+P2 = 1
+T1 = 0 + 273
+T2 = 273 + 273
+V1 = 4
+V2 = (V1 * P1 * T2) / (P2 * T1)
+print(V2)
+
+# 131 (전압력)
+PN = 2
+PO = 3
+VN = 4
+VO = 4
+V = 5
+PALL = ((PN * VN) + (PO * VO)) / V
+print(PALL)
+
+# 133  (보일의법칙) P1 V1 = P2 V2 , V2 = P1 V1 / P2
+P1 = 200
+V1 = 20
+P2 = 1
+V2 = (P1 * V1) / P2
+print(V2)
+
+# 134  (샬의법칙) P1 / T1 = P2 / T2 , T2 =  P2 T1 / P1
+P1 = 110
+P2 = 130
+T1 = 30 + 273
+V1 = 45
+T2 = ( P2 * T1) / P1
+print(T2-273)
+
+# 135  
+P1 = 2
+V1 = 3
+T1 = 0 + 273
+P2 = 3
+T2 = 0 + 273
+V2 = 5
+V3 = 3
+P3 = ((P1 * V1) +(P2 * V2)) / V3
+print(P3)
+
+# 137  (보일샬의 법칙) P1 V1 / T1 = P2 V2 /T2 , 
+P1 = 2
+V1 = 80
+T1 = 30 + 273
+T2 = 15 + 273
+V2 = 4
+P2 = ((P1 * V1 * T2) / (T1 * V2)) 
+print(P2)
+
+'''
+
+SANGSU = 9/5
+C = 0
+FSANGSU = 32
+F = (SANGSU * C) + FSANGSU
+print(F)
+
+SANGSU2 = 5/9
+FSANGSU = 32
+F = 0
+C = SANGSU2 * (F-32)
+print(C)
+
+C = 0
+KSANGSU = 273
+K = C + KSANGSU
+print(K)
+ 
+K = 1
+RSANGSU = 1.8
+R = K * RSANGSU
+print(R)
+
+F = 0
+RSANGSU1 = 460
+R = F + RSANGSU1
+print(R)

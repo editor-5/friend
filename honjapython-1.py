@@ -305,12 +305,68 @@ def 함수(*가변, **딕셔너리):
 함수("안", "녕", "하",
    a=10, b=20, c=30)
 
+
+
+# 53강
+
+def f(x):
+    return x + 1
+
+print(f(1))
+print(f(2))
+
+
+
+def sum_all(start, end):
+
+    output = 0
+    for i in range(start, end +1):
+        output += i
+    return output
+
+print(sum_all(1,10))
+print(sum_all(1,100))
+print(sum_all(1,1000))
+
+
+
+# f(x) = 2x +1
+def f(x):
+    return 2 * x + 1
+
+print(f(10))
+
+# g(x) = x^2 + 2x + 1
+
+def g(x):
+    return x**2 + 2 * x + 1
+
+print(g(10))
+
+
+
+def mul(*values):
+    output = 1
+    for i in values:
+        output *=i
+
+    return output
+
+
+
+print(mul(5, 7, 9, 10))
+print(5*7*9*10)
+
+
+
+def function(*values, valueA, valueB):
+    pass
+function(1, 2, 3, 4, 5, valueA=10, valueB=20)
+
 '''
-
-
-
-
-
+def function(valueA, valueB, *values):
+    pass
+function(1, 2, 3, 4, 5,)
 
 
 
