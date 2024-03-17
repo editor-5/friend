@@ -1,12 +1,8 @@
-# 산소의 분압= (산소의 양 / 전체 공기의 양 × 총 압력)
-# 산소의 분압= 4L / 4L × 1 기압 
-# 산소의 분압=1 기압 
+# Selenium 임포트
+from selenium import webdriver
 
-O = 0.2  # 산소비율 백분율
-air = 20  
-psi = 1   
-yonggi = 4  
+# 크롬 드라이버 생성
+driver = webdriver.Chrome(r"C:\Users\gas00\chromedriver-win64")
 
-dab = (air * O ) / yonggi * psi
-
-print(dab)
+# 사이트 접속하기
+driver.get('https://codeit.kr')
