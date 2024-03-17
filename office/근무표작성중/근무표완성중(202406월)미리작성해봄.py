@@ -27,28 +27,51 @@ for _ in range(1):           # 6월
   print(data[data.index(e)])
   print(data[data.index(f)])
   print(data[data.index(g)])  
-        
-
-for _ in range(3):
-
+  print(data[data.index(g)]) 
     
-  print(data[data.index(b)])
-  print(data[data.index(b)])   
-  print(data[data.index(c)])
-  print(data[data.index(c)])
-  print(data[data.index(a)])    
-  print(data[data.index(a)])   
-  
-  
 
 for _ in range(1):
 
-  print(data[data.index(b)]) 
-  print(data[data.index(b)])
-  print(data[data.index(c)])   
-  print(data[data.index(c)])
-  print(data[data.index(a)])
-  print(data[data.index(a)])
+    
+  print(data[data.index(h)])
+  print(data[data.index(h)])   
+  print(data[data.index(i)])
+  print(data[data.index(i)])
+  print(data[data.index(g)])    
+  print(data[data.index(g)])   
+  
+for _ in range(1):
+
+    
+  print(data[data.index(h)])
+  print(data[data.index(h)])   
+  print(data[data.index(i)])
+  print(data[data.index(i)])
+  print(data[data.index(g)])    
+  print(data[data.index(g)]) 
+
+for _ in range(1):
+
+    
+  print(data[data.index(h)])
+  print(data[data.index(h)])   
+  print(data[data.index(i)])
+  print(data[data.index(i)])
+  print(data[data.index(g)])    
+  print(data[data.index(g)])   
+  
+for _ in range(1):
+
+    
+  print(data[data.index(h)])
+  print(data[data.index(h)])   
+  print(data[data.index(i)])
+  print(data[data.index(i)])
+  print(data[data.index(g)])    
+     
+
+
+
  
 
 
