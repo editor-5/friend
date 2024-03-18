@@ -363,11 +363,129 @@ def function(*values, valueA, valueB):
     pass
 function(1, 2, 3, 4, 5, valueA=10, valueB=20)
 
-'''
+
 def function(valueA, valueB, *values):
     pass
 function(1, 2, 3, 4, 5,)
 
+
+# 56강
+
+a = [1, 2, 3, 4]
+b = a
+
+a = [5, 6, 7, 8]
+a.append(5)
+
+print(a)
+print(b)
+
+
+a = 10
+b = [1, 2, 3, 4]
+
+print(a, b)
+
+def function_a(c,d):
+    c = 20
+    d = [5, 6, 7, 8]
+function_a(a,b) 
+print(a, b)   
+
+def function_b(c,d):
+    c = 30
+    d.extend([9, 10])
+function_b(a,b)    
+print(a,b) 
+
+
+
+# 57강
+
+# 재귀함수 - 자기자신을 호출하는 함수 - 팩토리얼 연산
+# n! = n * (n-1) * (n-2) * .... * 1
+# 3! = 3 * 2 *1
+# - 반복문으로 구현
+def factorial(n):
+    output = 1
+    for i in range(1, n + 1):
+        output *= i
+    return output
+
+print(factorial(2))
+print(factorial(3))
+print(factorial(4))
+print(factorial(5))
+
+# - 재귀함수로 구현 
+# - 수학의 수열의 점화식
+# - 팩토리얼 점화식
+# - 1! = 1
+# (n이 2 이상의 수일때) n! = n * (n-1)!
+
+def factorial(n):
+    # 1! = 1
+    if n == 1:
+        return 1
+    #(n이 2 이상의 수일 때) n! = n * (n-1)!
+    elif n >= 2:
+        return n * factorial(n - 1)
+    
+print(factorial(2))
+print(factorial(3))
+print(factorial(4))
+print(factorial(5))
+
+
+# 58강
+
+# 피보나치 수열
+# a_1 = 1
+# a_2 = 1
+# a_n = a_{n-1} + a_{n-2}
+# a_3 = 1 + 1 = 2
+# a_4 = a_3 + a_2 = 2 + 1 = 3
+# a_5 = a_4 + a_3 = 3 + 2 = 5
+# .....
+memo = {}
+def f(n):
+    # a_1 = 1
+    if n in memo:
+        return memo[n]
+    if n == 1:
+        return 1
+    # a_2 = 1
+    elif n == 2:
+        return 1
+    # a_n = a_{n-1} + a_{n-2}
+    else:
+        temp = f(n - 1) + f(n - 2)
+        memo[n] = temp
+        return temp
+
+print(f(50))
+print(memo)
+
+
+
+memo = {1: 1, 2: 1}
+def f(n):
+    # a_1 = 1
+    if n in memo:
+        return memo[n]
+    
+    else:
+        temp = f(n - 1) + f(n - 2)
+        memo[n] = temp
+        return temp
+
+print(f(50))
+print(memo)
+
+# 바다사자 연산자 최근 파이썬
+
+'''
+    
 
 
 

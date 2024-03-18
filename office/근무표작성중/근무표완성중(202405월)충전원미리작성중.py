@@ -23,7 +23,7 @@ data = [a, b, c, d, e, f, g, h, i]
 for _ in range(5):
   
   print(data[data.index(a)])
-  print(data[data.index(a)]) 
+  print(data[data.index(a)])  
   print(data[data.index(b)])   
   print(data[data.index(b)])
   print(data[data.index(c)])
