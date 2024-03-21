@@ -1,8 +1,14 @@
-# Selenium 임포트
-from selenium import webdriver
+# a ='[일마감22.01월.xlsx](2)'!$F$13
+# a = [''='', ''[일마감22.01월.xlsx]'', ''(2)!$F$13'' ]
+ 
+a =  "='[일마감22.01월.xlsx]" 
+ 
+b = '('
+c = '2'
+d = ")'!$F$13"
 
-# 크롬 드라이버 생성
-driver = webdriver.Chrome(r"C:\Users\gas00\chromedriver-win64")
+f = a + b + c + d  
+ 
 
-# 사이트 접속하기
-driver.get('https://codeit.kr')
+ 
+print(f)
