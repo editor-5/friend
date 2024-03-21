@@ -24,51 +24,52 @@ data = [a, b, c, d, e, f, g, h, i]
 for _ in range(1):
 
   print(data[data.index(g)])  
-  print(data[data.index(h)])
+  print(data[data.index(g)])
   print(data[data.index(h)])   
+  print(data[data.index(h)])
   print(data[data.index(i)])
-  print(data[data.index(i)])
+  print(data[data.index(i)])    
      
   
 for _ in range(1):
 
   print(data[data.index(g)])    
   print(data[data.index(g)])   
+  print(data[data.index(g)])
+  print(data[data.index(h)])  # 10
   print(data[data.index(h)])
-  print(data[data.index(h)])   
-  print(data[data.index(i)])
-  print(data[data.index(i)])
+  
 
 for _ in range(1):
 
-  print(data[data.index(g)])    
+  print(data[data.index(i)])    
+  print(data[data.index(i)])   
+  print(data[data.index(g)])  # 15
   print(data[data.index(g)])   
   print(data[data.index(h)])
-  print(data[data.index(h)])   
-  print(data[data.index(i)])
-  print(data[data.index(i)])
+  print(data[data.index(h)])
   
 for _ in range(1):
 
-  print(data[data.index(g)])    
-  print(data[data.index(g)])   
+  print(data[data.index(i)])    
+  print(data[data.index(i)])  # 20
   print(data[data.index(g)]) 
-  print(data[data.index(h)])
+  print(data[data.index(g)])
   print(data[data.index(h)])   
-  print(data[data.index(i)])   
+   
   
 
 for _ in range(1):
 
-  print(data[data.index(i)])   
+  print(data[data.index(i)])  # 23 
+  print(data[data.index(i)])  # 24 
   print(data[data.index(d)])  # 25 
-  print(data[data.index(d)])  # 26
+  print(data[data.index(f)])  # 26
   print(data[data.index(d)])  # 27 
   print(data[data.index(h)])
   print(data[data.index(h)])
   print(data[data.index(i)])    
-  print(data[data.index(i)])    
-  
+  print(data[data.index(i)])
 
 
 
