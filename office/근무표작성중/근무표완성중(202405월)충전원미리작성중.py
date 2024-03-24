@@ -18,11 +18,10 @@ data = [a, b, c, d, e, f, g, h, i]
 # g ->x i, g ->x b
 # h->x g, h->x a
 # i ->x h, i ->x c
-
+# 4월말일 c c a
   
-for _ in range(5):
+for _ in range(1):
   
-  print(data[data.index(a)])
   print(data[data.index(a)])  
   print(data[data.index(b)])   
   print(data[data.index(b)])
@@ -30,6 +29,34 @@ for _ in range(5):
   print(data[data.index(c)])
   
 for _ in range(1):
+  
+  print(data[data.index(a)])
+  print(data[data.index(a)])  
+  print(data[data.index(b)])   
+  print(data[data.index(b)])
+  print(data[data.index(c)])
+  print(data[data.index(c)])
 
+for _ in range(1):
+  
+  print(data[data.index(a)]) # 12
+  print(data[data.index(a)])  
+  print(data[data.index(a)])   
+  print(data[data.index(b)])
+  print(data[data.index(b)])
+  print(data[data.index(c)]) 
+
+for _ in range(2):
+  
+  print(data[data.index(c)])
+  print(data[data.index(a)])  
+  print(data[data.index(a)])   
+  print(data[data.index(b)])
+  print(data[data.index(b)])
+  print(data[data.index(c)])    
+  
+for _ in range(1):
+
+  print(data[data.index(c)])
   print(data[data.index(a)])
   
