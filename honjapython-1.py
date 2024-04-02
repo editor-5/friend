@@ -484,14 +484,214 @@ print(memo)
 
 # 바다사자 연산자 최근 파이썬
 
+
+def flatten(data):
+    output = []
+    for item in data:
+        if type(item) == list:
+            output.extend(flatten(item))
+        else:    
+            output.append(item)
+    return output
+
+data = [[1,2,3], [4,[5, 6]], 7, [8,9]]    
+print(flatten(data))
+
+
+a = (1,2,3)
+b = (1,)
+
+print(b)
+
+
+A = ["바나나", "사과", "고구마", "감자"]
+
+for i,item in enumerate(A):
+    print(i, item)
+
+B = {
+    "이름": "별",
+    "생일": (2019, 11, 14)
+}
+
+for key, value in B.items():
+    print(key, value)
+
+
+# 61강 콜백함수
+
+def call_10_times():
+    print("호출되었습니다!!")
+
+a = call_10_times
+print(a)
+
+a()
+
+
+
+def call_10_times(콜백함수):
+    for i in range(10):
+        콜백함수(i)
+
+def print_hello(매개변수):
+    print("안녕하세요!", 매개변수)
+ 
+
+call_10_times(print_hello)
+
+
+
+def power(숫자):
+    return 숫자 ** 2
+
+A = [1, 2, 3, 4, 5]
+이터레이터 = map(power, A)
+print(list(이터레이터))
+
+
+
+# filter(함수, 리스트)
+# 리스트의 요소를 함수에 전달했을 때
+# 결과로 True가 나오는 녀석을 모아서
+# 새로운 이터레이터를 만듦
+
+def 홀수인가요(숫자):
+    if 숫자 % 2 == 1:
+        return True
+    else:
+        return False
+A = [1, 2, 3, 4, 5]
+이터레이터 = filter(홀수인가요, A)
+print(list(이터레이터))
+
+
+print([
+    # 표현식
+    숫자
+    # 반복문
+    for 숫자 in range(1, 5+1)
+    # 조건문
+    if 숫자 % 2 == 1
+])
+
+def my_map(콜백함수, 리스트):
+    output = []
+    for 요소 in 리스트:
+        output.append(콜백함수(요소))
+    return output
+
+def power(숫자):
+    return 숫자 ** 2
+A = [1, 2, 3, 4, 5]
+print(my_map(power, A))
+
+# 62강
+
+def my_filter(콜백함수,리스트):
+    output = []
+    for 요소 in 리스트:
+        if 콜백함수(요소) == True:
+            output.append(요소)
+    return output
+
+def is_odd(숫자):
+    return 숫자 % 2 == 1
+
+A = [1, 2, 3, 4, 5]
+print(my_filter(is_odd, A))
+
+
+# 63강
+# 람다: 간단한 함수를 간단하게 해주는 문법
+#def power(숫자):
+#    return 숫자 ** 2
+
+power = lambda 숫자: 숫자 ** 2
+print(power(10))
+
+#def is_odd(숫자):
+#    return 숫자 % 2 == 1
+
+is_odd = lambda 숫자: 숫자 % 2 == 1
+print(power(10))
+
+A = [1, 2, 3, 4, 5]
+
+이터레이터 = map(lambda 숫자: 숫자 ** 2, A)
+print(list(이터레이터))
+
+이터레이터 = filter(lambda 숫자: 숫자 % 2 == 1, A)
+print(list(이터레이터))
+
+
+
+A = [52, 273, 32, 103, 57]
+print(min(A))
+print(max(A))
+
+A = [{
+    "제목": "혼자 공부하는 파이썬",
+    "가격": 18000
+}, {
+    "제목": "혼자 공부하는 머신런닝 + 딥러닝",
+    "가격": 26000
+}, {
+    "제목": "혼자 공부하는 자바스크립트",
+    "가격": 24000
+}]
+
+print(min(A, key=lambda 책: 책["가격"] ))
+print(max(A, key=lambda 책: 책["가격"] ))
+A.sort(key=lambda 책: 책["가격"])
+print(A)
+
+
+
+# 64강
+# 파일처리
+# 읽기 처리/ 쓰기 처리
+
+# (1) 스트림 연결(stream)
+# w 쓰기모드, a 추가해서 쓰기 모드, r 읽기 모드 
+파일 = open("test.txt", "r")
+# (2) 스트림을 통해 데이터 통신
+문자열 = 파일.read()
+print(문자열)
+
+# (3) 스트림 해제
+파일.close()
+
+
+ 
+with open("test.txt", "r") as 파일:
+    문자열 = 파일.read()
+    print(문자열)
+
+
+
+with open("a.txt", "w") as 파일:
+    파일.write("Hello World")
+
+'''    
+
+파일 = open("data1.txt", "r")
+데이터 = 파일.read()
+if 데이터 != "":
+    print(데이터.strip().split("\n"))
+파일.close()
+
+문자열 = input("> 데이터를 입력해주세요: ")
+
+파일 = open("data1.txt", "a")
+파일.write(문자열 + "\n")
+파일.close()
+
+     
+
+
 '''
-    
-
-
-
-
-
-'''# 77강
+# 77강
 # raise Exception("예외를 강제로 발생시킵니다.")
 
 number = input("정수 입력>")
