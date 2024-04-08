@@ -1,0 +1,34 @@
+SELECT payment_mathod, COUNT(*) FROM orders    
+GROUP BY payment_method
+
+SELECT payment_method, COUNT(*) FROM orders
+WHERE course_title = '웹개발 종합반'
+GROUP BY payment_method
+ORDER BY COUNT(*) DESC
+
+SELECT * FROM users
+ORDER BY email DESC
+
+SELECT * FROM users
+ORDER BY name DESC
+
+SELECT * FROM users
+ORDER BY created_at DESC
+
+SELECT name, COUNT(*) FROM users
+WHERE email LIKE '%gmail.com'
+GROUP BY name
+
+SELECT course_id, ROUND(AVG(likes),1) FROM checkins
+GROUP BY course_id
+
+SHOW TABLES
+
+SELECT payment_method, COUNT(*) AS cnt  FROM orders o 
+WHERE o.course_title = '앱개발 종합반'
+GROUP BY payment_method 
+
+SELECT payment_method, COUNT(*) 
+FROM orders 
+WHERE email LIKE '%@naver.com' AND course_title = '앱개발 종합반'
+GROUP BY payment_method;

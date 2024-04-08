@@ -673,7 +673,7 @@ with open("test.txt", "r") as 파일:
 with open("a.txt", "w") as 파일:
     파일.write("Hello World")
 
-'''    
+    
 
 파일 = open("data1.txt", "r")
 데이터 = 파일.read()
@@ -687,7 +687,57 @@ if 데이터 != "":
 파일.write(문자열 + "\n")
 파일.close()
 
-     
+
+
+import random
+한글 = list("가나다라마바사아자차카타파하")
+
+파일 = open("human.txt", "w")
+파일.write("이름,몸무게,키\n")
+print("이름,몸무게,키")
+for i in range(1000):
+    이름 = random.choice(한글) + random.choice(한글)
+    몸무게 = random.randrange(40, 120)
+    키 = random.randrange(140, 200)
+    파일.write(f"{이름},{몸무게},{키}\n")
+    # print(f"{이름},{몸무게},{키}")
+    # print("{},{},{}".format(이름, 몸무게, 키))
+    # print(",".join([이름, str(몸무게), str(키)]))
+파일.close()
+
+
+파일 = open("human.txt", "r")
+
+for 한줄 in 파일:
+    이름,몸무게,키 = 한줄.strip().split(",")
+
+    if not 몸무게.isdigit():
+        continue
+    몸무게 = int(몸무게)
+    키 = int(키)
+    bmi = 몸무게 / (키 / 100) **2
+    결과 = ""
+    if 25 <= bmi:
+        결과 = "과체중"
+    elif 18.5 <= bmi:
+        결과 = "정상체중"
+    else:
+        결과 = "저체중"
+    # print(이름,몸무게,키,bmi,결과)
+    # print(한줄.strip().split(","))
+    print("\n".join([
+        f"이름: {이름}",
+        f"몸무게: {몸무게}",
+        f"키: {키}",
+        f"bmi: {bmi}",
+        f"결과: {결과}", ""
+    ]))
+
+파일.close()    
+
+'''
+
+
 
 
 '''
