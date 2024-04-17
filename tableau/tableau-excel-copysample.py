@@ -15,9 +15,9 @@ for c in range(1, 32):
 
 # CAR WASH
 
-a = "='[일마감24.03월.xlsx]"
+a = "='[일마감23.12월.xlsx]"
 b = '('
-d = ")'!$P$24"
+d = ")'!$P$19"
 
 # c값을 변경하면서 f를 출력
 for c in range(1, 32):
