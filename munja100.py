@@ -353,7 +353,7 @@ n = int(10)
 sum = 0
 for i in range(1,n+1):
     sum += i
-print('1부터',n,'까지 모두 더한 합은',sum) '''
+print('1부터',n,'까지 모두 더한 합은',sum) 
 
 cnt = 0
 for i in range(1,101):
@@ -361,6 +361,23 @@ for i in range(1,101):
     if i[-1] == '3' or i[-1] == '6' or i[-1] == '9':
         print('박수치는 숫자',i)
         cnt += 1
+'''
+
+# 53번
+
+# 초기값 설정
+total = 0
+num = 1
+
+# while 루프를 사용하여 합 구하기
+while num <= 100:
+    total += num
+    num += 1
+
+# 결과 출력
+print("1부터 100까지의 합은:", total)
+
+
  
 
 
