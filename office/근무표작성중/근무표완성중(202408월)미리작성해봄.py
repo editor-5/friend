@@ -21,23 +21,45 @@ data = [a, b, c, d, e, f, g, h, i]
 # i ->x h, i ->x c
 
 
-for _ in range(5):
-
-  
-  print(data[data.index(h)])
-  print(data[data.index(h)])   
-  print(data[data.index(i)])
-  print(data[data.index(i)])
-  print(data[data.index(g)])    
-  print(data[data.index(g)])    
-     
-  
 for _ in range(1):
 
-  print(data[data.index(h)])
   
+  print(data[data.index(g)])
+  print(data[data.index(g)])   
+  print(data[data.index(h)])
+  print(data[data.index(h)])
+  print(data[data.index(i)])    
+  print(data[data.index(i)])    
+     
+for _ in range(1):
 
+  
+  print(data[data.index(g)])
+  print(data[data.index(g)])   
+  print(data[data.index(h)])
+  print(data[data.index(h)])
+  print(data[data.index(i)])    
+  print(data[data.index(i)])    
+  print(data[data.index(g)]) #13
+  print(data[data.index(g)]) #14    
+  print(data[data.index(g)]) #15
+  print(data[data.index(e)])
+  print(data[data.index(d)]) 
+  
+for _ in range(2):
+  
+  print(data[data.index(h)])
+  print(data[data.index(h)])
+  print(data[data.index(i)])    
+  print(data[data.index(i)])    
+  print(data[data.index(g)])  
+  print(data[data.index(g)]) 
 
+for _ in range(1):
+  
+  print(data[data.index(h)])
+  print(data[data.index(h)])  
+  
 
   
 
