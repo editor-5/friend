@@ -867,7 +867,7 @@ def 하노이탑(원판개수, 시작기둥, 대상기둥, 보조기둥):
 하노이탑(원판개수, "A", "B", "C")
 print(카운터)
 
-'''
+
 원판개수 = int(input("원판의 개수를 입력하세요: "))
 print((2**원판개수) - 1)
 
@@ -878,6 +878,145 @@ print((2**원판개수) - 1)
 # 원판 5개 : 31 = 32 - 15
 
 
+
+#73강
+
+입력 = input("정수입력> ")
+
+if 입력.isdigit():
+    숫자입력 = int(입력)
+    print(f"원의 반지름: {숫자입력}")
+    print(f"원의 둘레: {2 * 3.14 * 숫자입력}")
+    print(f"원의 넓이: {3.14 * 숫자입력 * 숫자입력}")
+
+else:
+    print("정수를 입력하지 않았습니다.")
+
+
+#74강
+
+입력 = input("정수입력> ")
+
+try:
+    숫자입력 = int(입력)
+    print(f"원의 반지름: {숫자입력}")
+    print(f"원의 둘레: {2 * 3.14 * 숫자입력}")
+    print(f"원의 넓이: {3.14 * 숫자입력 * 숫자입력}")
+except:    
+     print("정수를 입력하지 않았습니다.")
+
+ 
+입력 = input("숫자입력> ")
+
+try:
+    숫자입력 = float(입력)
+    print(f"원의 반지름: {숫자입력}")
+    print(f"원의 둘레: {2 * 3.14 * 숫자입력}")
+    print(f"원의 넓이: {3.14 * 숫자입력 * 숫자입력}")
+except:    
+     print("정수를 입력하지 않았습니다.")
+
+try :
+     예외가 발생할 가능성이 있는 코드
+
+except:
+     예외가 발생했을 때 실행할 코드
+
+       
+
+try :
+     예외가 발생할 가능성이 있는 코드
+
+except:
+
+
+
+입력리스트 = ["52", "273", "32.1", "103", "숫자로변환할수없는 문자열"]
+출력리스트 = []
+
+for 요소 in 입력리스트:
+    try:
+        출력리스트.append(float(요소))
+    except:
+        pass
+
+print(출력리스트)
+
+
+
+def isfloat(입력):
+    try:
+        float(입력)
+        return True
+    except:
+        return False
+    
+입력리스트 = ["52", "273", "32.1", "103", "숫자로변환할수없는 문자열"]
+출력리스트 = []
+
+for 요소 in 입력리스트:
+    try:
+        출력리스트.append(float(요소))
+    except:
+        pass
+
+print(출력리스트)
+
+
+
+# 75강
+
+try :
+     예외가 발생할 가능성이 있는 코드
+     pass
+except:
+     예외가 발생했을 때 실 행할 코드
+     pass
+else:
+     예외가 발생하지 않았을 때 실행할 코드
+     pass
+finally:
+     무조건 생행하는 코드
+     pass
+
+
+def 함수(파일이름):
+
+    try:
+        파일 = open(파일이름, "r")
+        내용 = 파일.read()
+        try:
+            숫자 = int(내용)
+            return 내용
+        except:
+            print("숫자로 변환할 수 없는 파일입니다.")
+        finally:
+            파일.close()
+    except:
+        print("존재하지 않는 파일입니다.")
+
+파일이름 = input("파일 이름> ")
+print(함수(파일이름))
+
+'''
+
+def 함수(파일이름):
+    파일 = None
+    try:
+        파일 = open(파일이름, "r")
+        내용 = 파일.read()
+        숫자 = int(내용)
+        return 내용
+    except FileNotFoundError:
+        print("존재하지 않는 파일입니다.")
+    except ValueError:
+        print("숫자로 변환할 수 없는 파일입니다.")
+    finally:
+        if 파일 != None:
+            파일.close()
+    
+파일이름 = input("파일 이름> ")
+print(함수(파일이름))
 
 '''
 # 77강
