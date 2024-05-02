@@ -361,7 +361,7 @@ for i in range(1,101):
     if i[-1] == '3' or i[-1] == '6' or i[-1] == '9':
         print('박수치는 숫자',i)
         cnt += 1
-'''
+
 
 # 53번
 
@@ -378,6 +378,52 @@ while num <= 100:
 print("1부터 100까지의 합은:", total)
 
 
+# 54번 
+
+while True:  # 무한 반복
+    num = int(input("숫자를 입력하세요: "))  # 사용자로부터 숫자 입력 받기
+    if num >= 0:  # 입력된 숫자가 0보다 크거나 같은 경우
+        print("입력된 수:", num)  # 입력된 수 출력
+    else:  # 입력된 숫자가 음수인 경우
+        print("프로그램을 종료합니다.")  # 프로그램 종료 메시지 출력
+        break  # 반복문 종료
+
+        
+
+while True:
+    name = input("이름을 입력하세요 :  ")
+    if name != 'end':
+        print('안녕하세요', name,'님')
+    else:
+        print('종료합니다') 
+        break   
  
 
 
+print('makit', end = ' ')
+print('woojin')
+
+for i in range(1, 11):
+    print(i, end = ' ')
+
+a = 'makit'
+
+for i in range(3):
+    print('makit', end = ' $$$ ')
+
+    '''
+
+# 56번
+
+n1 = int(input('첫 번재 숫자르 입력하세요'))
+n2 = int(input('두 번재 숫자르 입력하세요'))
+
+sum = 0
+
+for i in range(n1, n2 + 1):
+    sum += i
+    if i != n2:
+        print(i, end = ' + ')
+    else:
+        print(i, end = '')
+print('=', sum)
