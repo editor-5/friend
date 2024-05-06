@@ -2,9 +2,9 @@
 '''
 # 충전금액
 
-a = "='[일마감24.03월.xlsx]"
+a = "='[일마감24.04월.xlsx]"
 b = '('
-d = ")'!$K$13"
+d = ")'!$k$13"
 
 # c값을 변경하면서 f를 출력
 for c in range(1, 32):
@@ -15,12 +15,12 @@ for c in range(1, 32):
 
 # CAR WASH
 
-a = "='[일마감23.12월.xlsx]"
+a = "='[일마감24.04월.xlsx]"
 b = '('
-d = ")'!$P$19"
+d = ")'!$P$28"
 
 # c값을 변경하면서 f를 출력
-for c in range(1, 32):
+for c in range(1, 31):
     f = a + b + str(c) + d
     print(f)
     
