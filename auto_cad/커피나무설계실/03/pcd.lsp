@@ -1,0 +1,1 @@
+(defun c:PCD()  (command "DIMEDIT" "n" "PCD: <>"))

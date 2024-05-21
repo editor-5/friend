@@ -1,0 +1,3 @@
+C:\Program Files\Autodesk\AutoCAD 2021\Fonts
+
+이 폴더에 추가 글꼴을 복사해서 넣으세요!

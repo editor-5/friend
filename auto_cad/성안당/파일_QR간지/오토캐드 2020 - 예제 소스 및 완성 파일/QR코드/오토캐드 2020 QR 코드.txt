@@ -1,0 +1,31 @@
+P97 엑셀 표 가져오기
+https://youtu.be/5_EIWvzN3-o
+
+P115 직선을 이용한 도형그리기
+https://youtu.be/V2qqgVbNlNY
+
+P125 폴리선을 이용한 도형 그리기
+https://youtu.be/g7i7u4HGA-w
+
+P137 원과 호를 이용한 도형 그리기
+https://youtu.be/HEYCJLdTWLg
+
+P167 객체 복사하기
+https://youtu.be/czVtE9T9Oro
+
+P182 기어 그리기
+https://youtu.be/f97ggsb6IF8
+
+P217 도면층 객체 관리하기
+https://youtu.be/v5uEpgaVYq0
+
+P238 도면폼 만들기
+https://youtu.be/HiR_gqwN1kc
+
+P280 도면 제목 입력하기
+https://youtu.be/wUvo9GnJgvo
+
+P507 의자 뼈대 만들기
+https://youtu.be/lZC4luIZ-IM
+
+
