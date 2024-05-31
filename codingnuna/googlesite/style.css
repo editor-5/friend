@@ -54,7 +54,7 @@ body {
     border-radius: 4px;
     color: #3c4043;
     font-family: arial, sans-serif;
-    padding: 0 16px;
+    padding-right: 0 16px;
     margin: 11px 4px;
   }
   .button-style:hover{
@@ -75,13 +75,27 @@ body {
     padding: 15px 30px;
     border-bottom: 1px solid #dadce0;
     font-size: 15px;
-    color: #rgba(0,0,0,.54);
+    color: rgba(0,0,0,.54);
+    text-align: left;
+    
   }
   
   .second-line {
     padding: 15px 30px;
     font-size: 15px;
-    color: #rgba(0,0,0,.54);
+    color: rgba(0,0,0,.54);
+    text-align: left;
+  }
+
+  .second-line a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .54); 
+    transition: color 0.3s;
+    margin-right: 10px;
+  }
+
+  .second-line a:hover {
+    color: rgba(0, 0, 0, .8); 
   }
   
   .second-line-second {

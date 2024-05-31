@@ -1031,7 +1031,23 @@ except Exception as e:
         if i in ["Y", "y"]:
             메일보내기(type(e), str(e))
 
-'''
+try:
+    dasdasd[0]
+except Exception as e:
+    print(type(e))
+    print(e)
+ 
+try:
+    [사용자로부터 어떤 입력을 받고, 네트워크로 그걸 전송하는 프로그램]
+except Exception as e:
+    if type(e) == ValueError:
+        print("값을 다시 제대로 입력해주세요.")
+    elif type(e) == ConnectionError:
+        print("인터넷 연결에 문제가 있습니다.")
+    else:
+        i = input("오류 내용을 전송하시겠습니까? [Y/N]")
+        if i in ["Y","y"]:
+            메일보내기(type(e), str(e))
 
 try:
     int("asd")
@@ -1044,10 +1060,29 @@ except Exception as e:
     if i in ["Y", "y"]:
         메일보내기(type(e), str(e))
 
-
-
-'''
 # 77강
+
+number = input("정수 입력> ")
+number = int(number)
+
+if number > 0:
+    print("양수입니다")
+elif number == 0:
+    raise Exception("아직 구현되지 않았습니다.")
+else:
+    raise Exception("아직 구현되지 않았습니다.")
+
+
+
+def 사각형넓이구하기(너비,높이):
+    if 너비<= 0 or 높이 <= 0:
+        raise ValueError("너비와 높이는 양수여야합니다")
+    return 너비 * 높이
+print(사각형넓이구하기(0, -1))
+
+
+
+
 # raise Exception("예외를 강제로 발생시킵니다.")
 
 number = input("정수 입력>")
@@ -1067,6 +1102,8 @@ def 사각형넓이구하기(너비,높이):
 
 print(사각형넓이구하기(0,-1)) 
 
+
+
 # 79강
 
 def create_student(이름,국어,영어,수학,과학):
@@ -1081,6 +1118,10 @@ def average_student(학생):
     create_student("별이",76,96,95,90)
 ]
 
+# 문제(1) 합계를 구하는 함수가 있는지 + 평균을 구하는 함수가 있는지 자체를 모름
+# 문제(2) "학생들"이라는 변수에 직접적으로 접근할 수 있다는것
+# 문제(3) 함수가 분산되어 있다
+# 그래서 class사용함
 
 print("이름","총점","평균", sep="\t")
 
@@ -1089,35 +1130,143 @@ for 학생 in 학생들:
     평균 = average_student(학생)
     print(학생["이름"],총점, 평균, sep="\t" ) 
 
+
+
 # 80강
 
 class 학생:
+    # 클래스의 내용
+
     def 초기화(self,이름,국어,영어,수학,과학):
         self.이름 = 이름
         self.국어 = 국어
         self.영어 = 영어
         self.수학 = 수학
         self.과학 = 과학
-
-
+    def sum(self):
+        return self.국어 + self.수학 + self.영어 + self.과학
+    def average(self):
+        return self.sum() / 4
+# 객체(인스턴스)
 인성 = 학생()
-
+# 함수 호출방법(1)
 학생.초기화(인성,"인성",87, 88, 98, 95)
-
 print(인성.이름,인성.국어)
 
+
+#함수 호출방법(2)
+
 인성.초기화("인성",87, 88, 98, 95)
+인성.sum()
+인성.average()
+
 print(인성.이름, 인성.국어)
+
+
+class 학생:
+    # 클래스의 내용
+    
+    def __init__(self,이름,국어,영어,수학,과학):
+    def sum(self):
+    def average(self):
+
+# 객체(인스턴스)
+학생들 = [
+    학생("인성",87,88,98,95),
+    학생("구름",92,98,97,98),
+    학생("별이",76,96,95,90)
+]
+
+print("이름","총점","평균", sep="\t")
+
+for 학생 in 학생들:
+    총점 = sum_student(학생)
+    평균 = average_student(학생)
+    print(학생["이름"],총점, 평균, sep="\t" ) 
+
+# 스네이크 케이스: create_student  -> 대부분
+# 대문자 캐멜케이스: CreateStudent -> 클래스
+class Student:
+    # 클래스의 내용
+    
+    def __init__(self,이름,국어,영어,수학,과학):
+    def sum(self):
+    def average(self):
+    def print(self):    
+
+ 
+class StudentList :
+    
+    def__init__(self):
+    def add(self, student):
+    def print(self):
+
+Student = StudentList()
+Student.add(Student("인성",87, 88, 98, 95))
+Student.add(Student("구름",92, 98, 97, 98))
+Student.add(Student("별이",76, 96, 95, 90))
+Student.print()
+
+print("이름","총점","평균", sep="\t")
+
+for 학생 in 학생들:
+    총점 = sum_student(학생)
+    평균 = average_student(학생)
+    print(학생["이름"],총점, 평균, sep="\t" ) 
+
+'''   
+
+# 스파르타 클래스강좌
+
+class Monster():
+    hp = 100
+    alive = True
+
+    def damage(self, attack):
+        self.hp = self.hp - attack
+        if self.hp < 0:
+            self.alive = False
+
+    def status_check(self):
+        if self.alive:
+            print("살았다")
+        else:
+            print("죽었다")
+
+m1 = Monster()
+m1.damage(150)
+m1.status_check()
+
+m2 = Monster()
+m2.damage(90)
+m2.status_check()
+
+'''
+인성 = 학생()
+# 함수 호출방법(1)
+학생.초기화(인성,"인성",87, 88, 98, 95)
+print(인성.이름,인성.국어)
+
+
+#함수 호출방법(2)
+
+인성.초기화("인성",87, 88, 98, 95)
+인성.sum()
+인성.average()
+
+print(인성.이름, 인성.국어)
+
+
 
 인성.이름 = "인성"
 인성.국어 = 87
 인성.영어 = 88
 인성.수학 = 98
-
 인성.과학 = 95
 
 print(인성.이름)
 print(인성.국어)  x 
+
 
 # 84강
 
