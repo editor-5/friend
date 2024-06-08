@@ -867,7 +867,7 @@ def 하노이탑(원판개수, 시작기둥, 대상기둥, 보조기둥):
 하노이탑(원판개수, "A", "B", "C")
 print(카운터)
 
-'''
+
 원판개수 = int(input("원판의 개수를 입력하세요: "))
 print((2**원판개수) - 1)
 
@@ -879,8 +879,210 @@ print((2**원판개수) - 1)
 
 
 
-'''
+#73강
+
+입력 = input("정수입력> ")
+
+if 입력.isdigit():
+    숫자입력 = int(입력)
+    print(f"원의 반지름: {숫자입력}")
+    print(f"원의 둘레: {2 * 3.14 * 숫자입력}")
+    print(f"원의 넓이: {3.14 * 숫자입력 * 숫자입력}")
+
+else:
+    print("정수를 입력하지 않았습니다.")
+
+
+#74강
+
+입력 = input("정수입력> ")
+
+try:
+    숫자입력 = int(입력)
+    print(f"원의 반지름: {숫자입력}")
+    print(f"원의 둘레: {2 * 3.14 * 숫자입력}")
+    print(f"원의 넓이: {3.14 * 숫자입력 * 숫자입력}")
+except:    
+     print("정수를 입력하지 않았습니다.")
+
+ 
+입력 = input("숫자입력> ")
+
+try:
+    숫자입력 = float(입력)
+    print(f"원의 반지름: {숫자입력}")
+    print(f"원의 둘레: {2 * 3.14 * 숫자입력}")
+    print(f"원의 넓이: {3.14 * 숫자입력 * 숫자입력}")
+except:    
+     print("정수를 입력하지 않았습니다.")
+
+try :
+     예외가 발생할 가능성이 있는 코드
+
+except:
+     예외가 발생했을 때 실행할 코드
+
+       
+
+try :
+     예외가 발생할 가능성이 있는 코드
+
+except:
+
+
+
+입력리스트 = ["52", "273", "32.1", "103", "숫자로변환할수없는 문자열"]
+출력리스트 = []
+
+for 요소 in 입력리스트:
+    try:
+        출력리스트.append(float(요소))
+    except:
+        pass
+
+print(출력리스트)
+
+
+
+def isfloat(입력):
+    try:
+        float(입력)
+        return True
+    except:
+        return False
+    
+입력리스트 = ["52", "273", "32.1", "103", "숫자로변환할수없는 문자열"]
+출력리스트 = []
+
+for 요소 in 입력리스트:
+    try:
+        출력리스트.append(float(요소))
+    except:
+        pass
+
+print(출력리스트)
+
+
+
+# 75강
+
+try :
+     예외가 발생할 가능성이 있는 코드
+     pass
+except:
+     예외가 발생했을 때 실 행할 코드
+     pass
+else:
+     예외가 발생하지 않았을 때 실행할 코드
+     pass
+finally:
+     무조건 생행하는 코드
+     pass
+
+
+def 함수(파일이름):
+
+    try:
+        파일 = open(파일이름, "r")
+        내용 = 파일.read()
+        try:
+            숫자 = int(내용)
+            return 내용
+        except:
+            print("숫자로 변환할 수 없는 파일입니다.")
+        finally:
+            파일.close()
+    except:
+        print("존재하지 않는 파일입니다.")
+
+파일이름 = input("파일 이름> ")
+print(함수(파일이름))
+
+
+
+def 함수(파일이름):
+    파일 = None
+    try:
+        파일 = open(파일이름, "r")
+        내용 = 파일.read()
+        숫자 = int(내용)
+        return 내용
+    except FileNotFoundError:
+        print("존재하지 않는 파일입니다.")
+    except ValueError:
+        print("숫자로 변환할 수 없는 파일입니다.")
+    finally:
+        if 파일 != None:
+            파일.close()
+    
+파일이름 = input("파일 이름> ")
+print(함수(파일이름))
+
+
+try:
+    [사용자로부터 어떤 입력을 받고, 네트워크로 그걸 전송하는 프로그램]
+except Exception as e:
+    if type(e) == ValueError:
+        print("값을 다시 제대로 입력해주세요.")
+    elif type(e) ==ConnectionError:
+        print("인터넷 연결에 문제가 있습니다.")
+    else:
+        i = input("오류 내용을 전송하시겠습니까? [Y/N]")
+        if i in ["Y", "y"]:
+            메일보내기(type(e), str(e))
+
+try:
+    dasdasd[0]
+except Exception as e:
+    print(type(e))
+    print(e)
+ 
+try:
+    [사용자로부터 어떤 입력을 받고, 네트워크로 그걸 전송하는 프로그램]
+except Exception as e:
+    if type(e) == ValueError:
+        print("값을 다시 제대로 입력해주세요.")
+    elif type(e) == ConnectionError:
+        print("인터넷 연결에 문제가 있습니다.")
+    else:
+        i = input("오류 내용을 전송하시겠습니까? [Y/N]")
+        if i in ["Y","y"]:
+            메일보내기(type(e), str(e))
+
+try:
+    int("asd")
+except ValueError:
+    print("값을 다시 제대로 입력해주세요.")
+except ConnectionError:
+    print("인터넷 연결에 문제가 있습니다.")
+except Exception as e:    
+    i = input("오류 내용을 전송하시겠습니까? [Y/N]")
+    if i in ["Y", "y"]:
+        메일보내기(type(e), str(e))
+
 # 77강
+
+number = input("정수 입력> ")
+number = int(number)
+
+if number > 0:
+    print("양수입니다")
+elif number == 0:
+    raise Exception("아직 구현되지 않았습니다.")
+else:
+    raise Exception("아직 구현되지 않았습니다.")
+
+
+
+def 사각형넓이구하기(너비,높이):
+    if 너비<= 0 or 높이 <= 0:
+        raise ValueError("너비와 높이는 양수여야합니다")
+    return 너비 * 높이
+print(사각형넓이구하기(0, -1))
+
+
+
+
 # raise Exception("예외를 강제로 발생시킵니다.")
 
 number = input("정수 입력>")
@@ -900,6 +1102,8 @@ def 사각형넓이구하기(너비,높이):
 
 print(사각형넓이구하기(0,-1)) 
 
+
+
 # 79강
 
 def create_student(이름,국어,영어,수학,과학):
@@ -914,6 +1118,10 @@ def average_student(학생):
     create_student("별이",76,96,95,90)
 ]
 
+# 문제(1) 합계를 구하는 함수가 있는지 + 평균을 구하는 함수가 있는지 자체를 모름
+# 문제(2) "학생들"이라는 변수에 직접적으로 접근할 수 있다는것
+# 문제(3) 함수가 분산되어 있다
+# 그래서 class사용함
 
 print("이름","총점","평균", sep="\t")
 
@@ -922,35 +1130,296 @@ for 학생 in 학생들:
     평균 = average_student(학생)
     print(학생["이름"],총점, 평균, sep="\t" ) 
 
+
+
 # 80강
 
 class 학생:
+    # 클래스의 내용
+
     def 초기화(self,이름,국어,영어,수학,과학):
         self.이름 = 이름
         self.국어 = 국어
         self.영어 = 영어
         self.수학 = 수학
         self.과학 = 과학
+    def sum(self):
+        return self.국어 + self.수학 + self.영어 + self.과학
+    def average(self):
+        return self.sum() / 4
+# 객체(인스턴스)
+인성 = 학생()
+# 함수 호출방법(1)
+학생.초기화(인성,"인성",87, 88, 98, 95)
+print(인성.이름,인성.국어)
+
+
+#함수 호출방법(2)
+
+인성.초기화("인성",87, 88, 98, 95)
+인성.sum()
+인성.average()
+
+print(인성.이름, 인성.국어)
+
+
+class 학생:
+    # 클래스의 내용
+    
+    def __init__(self,이름,국어,영어,수학,과학):
+    def sum(self):
+    def average(self):
+
+# 객체(인스턴스)
+학생들 = [
+    학생("인성",87,88,98,95),
+    학생("구름",92,98,97,98),
+    학생("별이",76,96,95,90)
+]
+
+print("이름","총점","평균", sep="\t")
+
+for 학생 in 학생들:
+    총점 = sum_student(학생)
+    평균 = average_student(학생)
+    print(학생["이름"],총점, 평균, sep="\t" ) 
+
+# 스네이크 케이스: create_student  -> 대부분
+# 대문자 캐멜케이스: CreateStudent -> 클래스
+class Student:
+    # 클래스의 내용
+    
+    def __init__(self,이름,국어,영어,수학,과학):
+    def sum(self):
+    def average(self):
+    def print(self):    
+
+ 
+class StudentList :
+    
+    def__init__(self):
+    def add(self, student):
+    def print(self):
+
+Student = StudentList()
+Student.add(Student("인성",87, 88, 98, 95))
+Student.add(Student("구름",92, 98, 97, 98))
+Student.add(Student("별이",76, 96, 95, 90))
+Student.print()
+
+print("이름","총점","평균", sep="\t")
+
+for 학생 in 학생들:
+    총점 = sum_student(학생)
+    평균 = average_student(학생)
+    print(학생["이름"],총점, 평균, sep="\t" ) 
+
+  
+
+# 스파르타 클래스강좌
+
+class Monster():
+    hp = 100
+    alive = True
+
+    def damage(self, attack):
+        self.hp = self.hp - attack
+        if self.hp < 0:
+            self.alive = False
+
+    def status_check(self):
+        if self.alive:
+            print("살았다")
+        else:
+            print("죽었다")
+
+m1 = Monster()
+m1.damage(150)
+m1.status_check()
+
+m2 = Monster()
+m2.damage(90)
+m2.status_check()
 
 
 인성 = 학생()
-
+# 함수 호출방법(1)
 학생.초기화(인성,"인성",87, 88, 98, 95)
-
 print(인성.이름,인성.국어)
 
+
+#함수 호출방법(2)
+
 인성.초기화("인성",87, 88, 98, 95)
+인성.sum()
+인성.average()
+
 print(인성.이름, 인성.국어)
+
+
 
 인성.이름 = "인성"
 인성.국어 = 87
 인성.영어 = 88
 인성.수학 = 98
-
 인성.과학 = 95
 
 print(인성.이름)
 print(인성.국어)  x 
+
+
+# 81강
+# 추후재시청
+
+# 82강
+# 추후재시청
+
+ 
+class Circle:
+    def __init__(self,반지름):
+        if 반지름 < 0:
+            raise TypeError("반지름은 0 이상이어야 합니다.")
+        self.__반지름 = 반지름
+        self.__파이 = 3.14
+    def get_반지름(self):
+        return self.__반지름
+    def set_반지름(self, value):
+        if value < 0:
+            raise TypeError("반지름은 0 이상이어야 합니다.")
+        self.__반지름 = value        
+    def 둘레(self):
+        return 2 * self.__파이 * self.__반지름
+    def 넓이(self):
+        return self.__파이 * (self.__반지름 **2)
+    
+circle = Circle(10)
+# circle.반지름 = -10
+print(circle.get_반지름())
+circle.set_반지름(20)
+print(circle.둘레())
+print(circle.넓이())
+
+
+
+# 83강
+ 
+파이 = 3.14
+반지름 = 10
+넓이 = 반지름 * 반지름 * 3.14
+
+print("=" * 10)
+print("*" * 10)
+print("=" * 10)
+print(f"원의 반지름: {반지름}")
+print(f"넓이: {넓이}")
+print("=" * 10)
+print("*" * 10)
+print("=" * 10)
+
+
+class Circle:
+    def __init__(self, 반지름):
+        self.파이 = 3.14
+        self.반지름 = 반지름
+    def 넓이(self):
+        return self.반지름 * self.반지름 * self.파이
+    
+    def 출력(self):
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+        print(f"원의 반지름: {self.반지름}")
+        print(f"넓이: {self.넓이()}")
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+
+class Sqaure:
+    def __init__(self, 길이):
+        self.길이 = 길이
+    def 넓이(self):
+        return self.길이 ** 2
+    def 출력(self):
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+        print(f"정사각형 한 변의 길이: {self.길이}")
+        print(f"넓이: {self.넓이()}")
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+
+
+circle = Circle(10)
+circle.출력()
+
+square = Sqaure(10)
+square.출력()
+
+ 
+class Shape:
+    def __init__(self):
+        raise "생성자를 구현해주세요."
+    def 넓이(self):
+        raise "넓이 함수를 구현해주세요. 넓이를 리턴하는 함수를 작성해주세요."
+    def 출력보조(self):
+        raise "출력보조 함수를 구현해주세요. 출력 전 한마디르 입력해주세요."
+    def 출력(self):
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+        self.출력보조()
+        print(f"넓이: {self.넓이()}")
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+
+class Circle(Shape):
+    def __init__(self, 반지름):
+        self.파이 = 3.14
+        self.반지름 = 반지름
+    def 출력보조(self):
+        print(f"원의 반지름: {self.반지름}")
+    def 넓이(self):
+        return self.반지름 * self.반지름 * self.파이
+    
+class Square(Shape):
+    def __init__(self, 길이):
+        self.길이 = 길이
+    def 출력보조(self):
+        print(f"정사각형 한 변의 길이는: {self.길이}")
+    def 넓이(self):
+        return self.길이 ** 2
+
+circle = Circle(10)
+circle.출력()
+
+square = Square(10)
+square.출력()
+
+
+
+
+
+
+
+
+# GPT 코드
+
+import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def circumference(self):
+        return 2 * math.pi * self.radius
+
+# 사용 예제
+circle = Circle(5)
+print("원의 둘레:", circle.circumference())
+
+
 
 # 84강
 
@@ -1043,6 +1512,8 @@ class 초록버튼(버튼):
 파란버튼()
 초록버튼()   
 
+'''
+# 85강
 class Student:
     def __init__(self,수학):
         self.수학 = 수학
@@ -1067,7 +1538,31 @@ print(학생목록.average())
 
 # 이코드는 현대사용안함 학생목록[0] = 0
 # 상속과 컴포지션 상속: 프레임워크가 강제한다면 -> 상속
-# 콤포지션 : 프레임워크가 강제하는 것이 없다면 
+# 컴포지션 : 프레임워크가 강제하는 것이 없다면 
+
+class Student:
+    def __init__(self,수학):
+        self.__리스트 = []
+class StudentList(list):
+    def __init__(self):
+        self.__리스트 = []
+    def append(self, 요소):
+        if type(요소) != Student:
+            raise "Student를 전달해주세요."
+        self.__리스트.append(요소)
+    def sum(self):
+        output = 0
+        for 학생 in self.__리스트:
+            output += 학생.수학
+        return output
+    def average(self):
+        return self.sum() / len(self.__리스트) 
+
+학생목록 = StudentList()
+학생목록.append(Student(100))
+학생목록.append(Student(20))
+print(학생목록.sum())
+print(학생목록.average())  
 
 # 스택 선입후출
 class Stack:
@@ -1088,6 +1583,9 @@ print(stack.pop())
 print(stack.pop())
 print(stack.pop()) 
 
+# 실행안됨 휴~~~
+
+
 # 큐 선입선출
 
 class Queue:
@@ -1107,7 +1605,7 @@ queue.enqueue(30)
 print(queue.dequeue())
 print(queue.dequeue())
 print(queue.dequeue()) 
-
+'''
 # 87강
 import math
 print(math.sin(1))
