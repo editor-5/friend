@@ -1214,7 +1214,7 @@ for 학생 in 학생들:
     평균 = average_student(학생)
     print(학생["이름"],총점, 평균, sep="\t" ) 
 
-'''   
+  
 
 # 스파르타 클래스강좌
 
@@ -1241,7 +1241,7 @@ m2 = Monster()
 m2.damage(90)
 m2.status_check()
 
-'''
+
 인성 = 학생()
 # 함수 호출방법(1)
 학생.초기화(인성,"인성",87, 88, 98, 95)
@@ -1266,6 +1266,159 @@ print(인성.이름, 인성.국어)
 
 print(인성.이름)
 print(인성.국어)  x 
+
+
+# 81강
+# 추후재시청
+
+# 82강
+# 추후재시청
+
+ 
+class Circle:
+    def __init__(self,반지름):
+        if 반지름 < 0:
+            raise TypeError("반지름은 0 이상이어야 합니다.")
+        self.__반지름 = 반지름
+        self.__파이 = 3.14
+    def get_반지름(self):
+        return self.__반지름
+    def set_반지름(self, value):
+        if value < 0:
+            raise TypeError("반지름은 0 이상이어야 합니다.")
+        self.__반지름 = value        
+    def 둘레(self):
+        return 2 * self.__파이 * self.__반지름
+    def 넓이(self):
+        return self.__파이 * (self.__반지름 **2)
+    
+circle = Circle(10)
+# circle.반지름 = -10
+print(circle.get_반지름())
+circle.set_반지름(20)
+print(circle.둘레())
+print(circle.넓이())
+
+
+
+# 83강
+ 
+파이 = 3.14
+반지름 = 10
+넓이 = 반지름 * 반지름 * 3.14
+
+print("=" * 10)
+print("*" * 10)
+print("=" * 10)
+print(f"원의 반지름: {반지름}")
+print(f"넓이: {넓이}")
+print("=" * 10)
+print("*" * 10)
+print("=" * 10)
+
+
+class Circle:
+    def __init__(self, 반지름):
+        self.파이 = 3.14
+        self.반지름 = 반지름
+    def 넓이(self):
+        return self.반지름 * self.반지름 * self.파이
+    
+    def 출력(self):
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+        print(f"원의 반지름: {self.반지름}")
+        print(f"넓이: {self.넓이()}")
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+
+class Sqaure:
+    def __init__(self, 길이):
+        self.길이 = 길이
+    def 넓이(self):
+        return self.길이 ** 2
+    def 출력(self):
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+        print(f"정사각형 한 변의 길이: {self.길이}")
+        print(f"넓이: {self.넓이()}")
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+
+
+circle = Circle(10)
+circle.출력()
+
+square = Sqaure(10)
+square.출력()
+
+ 
+class Shape:
+    def __init__(self):
+        raise "생성자를 구현해주세요."
+    def 넓이(self):
+        raise "넓이 함수를 구현해주세요. 넓이를 리턴하는 함수를 작성해주세요."
+    def 출력보조(self):
+        raise "출력보조 함수를 구현해주세요. 출력 전 한마디르 입력해주세요."
+    def 출력(self):
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+        self.출력보조()
+        print(f"넓이: {self.넓이()}")
+        print("=" * 10)
+        print("*" * 10)
+        print("=" * 10)
+
+class Circle(Shape):
+    def __init__(self, 반지름):
+        self.파이 = 3.14
+        self.반지름 = 반지름
+    def 출력보조(self):
+        print(f"원의 반지름: {self.반지름}")
+    def 넓이(self):
+        return self.반지름 * self.반지름 * self.파이
+    
+class Square(Shape):
+    def __init__(self, 길이):
+        self.길이 = 길이
+    def 출력보조(self):
+        print(f"정사각형 한 변의 길이는: {self.길이}")
+    def 넓이(self):
+        return self.길이 ** 2
+
+circle = Circle(10)
+circle.출력()
+
+square = Square(10)
+square.출력()
+
+
+
+
+
+
+
+
+# GPT 코드
+
+import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def circumference(self):
+        return 2 * math.pi * self.radius
+
+# 사용 예제
+circle = Circle(5)
+print("원의 둘레:", circle.circumference())
+
 
 
 # 84강
@@ -1359,6 +1512,8 @@ class 초록버튼(버튼):
 파란버튼()
 초록버튼()   
 
+'''
+# 85강
 class Student:
     def __init__(self,수학):
         self.수학 = 수학
@@ -1383,7 +1538,31 @@ print(학생목록.average())
 
 # 이코드는 현대사용안함 학생목록[0] = 0
 # 상속과 컴포지션 상속: 프레임워크가 강제한다면 -> 상속
-# 콤포지션 : 프레임워크가 강제하는 것이 없다면 
+# 컴포지션 : 프레임워크가 강제하는 것이 없다면 
+
+class Student:
+    def __init__(self,수학):
+        self.__리스트 = []
+class StudentList(list):
+    def __init__(self):
+        self.__리스트 = []
+    def append(self, 요소):
+        if type(요소) != Student:
+            raise "Student를 전달해주세요."
+        self.__리스트.append(요소)
+    def sum(self):
+        output = 0
+        for 학생 in self.__리스트:
+            output += 학생.수학
+        return output
+    def average(self):
+        return self.sum() / len(self.__리스트) 
+
+학생목록 = StudentList()
+학생목록.append(Student(100))
+학생목록.append(Student(20))
+print(학생목록.sum())
+print(학생목록.average())  
 
 # 스택 선입후출
 class Stack:
@@ -1403,6 +1582,9 @@ stack.push(30)
 print(stack.pop())
 print(stack.pop())
 print(stack.pop()) 
+
+# 실행안됨 휴~~~
+
 
 # 큐 선입선출
 
@@ -1424,6 +1606,8 @@ print(queue.dequeue())
 print(queue.dequeue())
 print(queue.dequeue()) 
 
+#test
+'''
 # 87강
 import math
 print(math.sin(1))
