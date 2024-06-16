@@ -1,1 +1,0 @@
-& C:/Users/gas00/AppData/Local/Programs/Python/Python38/python.exe c:/Users/gas00/MathTool/honjapython-1.py

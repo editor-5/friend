@@ -1,1 +1,0 @@
-daytime,night,price_sum,year_price_sum 를 int로 변환해줘
