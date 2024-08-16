@@ -1,47 +1,23 @@
-.btn-outline-success {
-    color: chocolate;
-    border-color: chocolate;
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
 }
 
-.btn-outline-success:hover{
-    background-color: chocolate;
-    color: white;
-    border-color: chocolate;
+h1 {
+    margin-bottom: 40px;
+    color: #343a40;
 }
 
-footer{
-    background-color: black;
-    color: white;
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
 }
 
-.first-line {
-    border-bottom: 1px solid #392d23;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.second-line a {
-    color: white;
-    text-decoration: none;
-}
-
-.third-line {
-    display: none;
-}
-
-@media screen and (max-width:48rem) {
-    .first-line {
-        text-align:center;
-    }
-}
-
-@media screen and (max-width:48rem) {
-    .second-line {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media screen and (max-width:48rem) {
-    .third-line {
-        display: block;
-    }
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
 }
